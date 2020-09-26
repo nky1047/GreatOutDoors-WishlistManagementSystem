@@ -18,8 +18,7 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
 	public final ResponseEntity<ErrorMessage> somethingWentWrong(Exception ex){
 		
 		ErrorMessage exceptionResponse =
-				new ErrorMessage(ex.getMessage(), 
-						errorMsg,currentTimeMillis);
+				new ErrorMessage(ex.getMessage(), errorMsg,currentTimeMillis);
 		return new ResponseEntity<ErrorMessage>(exceptionResponse,
 				new HttpHeaders(),HttpStatus.BAD_REQUEST);
 		
@@ -29,8 +28,7 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
 	public final ResponseEntity<ErrorMessage> nullParameter(NullParameterException ex){
 
 		ErrorMessage exceptionResponse =
-				new ErrorMessage(ex.getMessage(), 
-					errorMsg,currentTimeMillis);
+				new ErrorMessage(ex.getMessage(), errorMsg,currentTimeMillis);
 		return new ResponseEntity<ErrorMessage>(exceptionResponse,
 				new HttpHeaders(),HttpStatus.NOT_FOUND);
 	}
@@ -39,8 +37,7 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
 	public final ResponseEntity<ErrorMessage> crudException(CrudException ex){
 
 		ErrorMessage exceptionResponse =
-				new ErrorMessage(ex.getMessage(), 
-						errorMsg,currentTimeMillis);
+				new ErrorMessage(ex.getMessage(), errorMsg,currentTimeMillis);
 		return new ResponseEntity<ErrorMessage>(exceptionResponse,
 				new HttpHeaders(),HttpStatus.NOT_FOUND);
 	}
