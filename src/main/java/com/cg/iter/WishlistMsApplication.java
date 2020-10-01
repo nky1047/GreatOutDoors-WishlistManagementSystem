@@ -2,6 +2,7 @@ package com.cg.iter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+//import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
@@ -11,25 +12,24 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 
-/*			Author  : Capgemini
- * 			Description : MAIN APPLICATION
-*/
+/*******************************************************************
+ * 
+ * 		MAIN APPLICATION
+ * 	
+ *******************************************************************/
 @SpringBootApplication
 @EnableSwagger2
-public class WishlistMsApplication {
-	@Bean
 
-	public RestTemplate getRestTemplate() {
-		return new RestTemplate();
-	}
+public class WishlistMsApplication {
 	
+	@Bean
+	public Docket productApi() {
+		return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.basePackage("com.cg.iter")).build();
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(WishlistMsApplication.class, args);
 	}
 
-	@Bean
-	public Docket productApi() {
-		return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.basePackage("com.cg.iter")).build();
-	}
+	
 }
