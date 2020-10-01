@@ -9,7 +9,6 @@ import java.time.LocalDateTime;
 
 import com.cg.iter.dto.ErrorMessage;
 import com.cg.iter.exception.CrudException;
-import com.cg.iter.exception.CustomExceptionHandler;
 import com.cg.iter.exception.NullParameterException;
 
 @RestController

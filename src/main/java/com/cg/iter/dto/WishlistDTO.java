@@ -21,9 +21,7 @@ public class WishlistDTO implements Serializable{
 	@Column(name= "product_id" ,nullable=false)
 	private String productId;
 	
-	
 public WishlistDTO() {
-	
 }
 
 public WishlistDTO(String userId, String productId) {
