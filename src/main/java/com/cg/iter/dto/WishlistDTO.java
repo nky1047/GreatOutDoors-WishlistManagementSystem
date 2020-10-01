@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
 
+@SuppressWarnings("serial")
 @Entity
 @Table(name = "wishlist")
 @IdClass(WishlistDTO.class)
@@ -21,7 +22,9 @@ public class WishlistDTO implements Serializable{
 	private String productId;
 	
 	
-public WishlistDTO() {}
+public WishlistDTO() {
+	
+}
 
 public WishlistDTO(String userId, String productId) {
 	super();

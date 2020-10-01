@@ -2,9 +2,7 @@ package com.cg.iter.service;
 
 import java.util.List;
 
-import org.springframework.http.ResponseEntity;
 
-import com.cg.iter.dto.ProductDTO;
 import com.cg.iter.dto.WishlistDTO;
 
 
