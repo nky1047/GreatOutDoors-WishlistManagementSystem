@@ -19,13 +19,8 @@ import com.cg.iter.service.WishlistService;
 @SpringBootTest
 class WishlistMsApplicationTests {
 	
-
-	
 	@Autowired
 	private WishlistService service;
-	
-	
-	
 	
 	@Test
 	public void testAddToWishlist1() throws CrudException{
