@@ -4,6 +4,10 @@ pipeline {
 	tools {
 		maven 'maven'
 	}
+	environment {
+		env.PATH = env.PATH + ";c:\\Windows\\System32" 
+	}
+
 	stages {
 
 			
@@ -12,6 +16,8 @@ pipeline {
 				bat 'mvn sonar:sonar'	
 			}	
 		}
+		
+		
 		
 		
 		
